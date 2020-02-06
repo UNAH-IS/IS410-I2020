@@ -62,8 +62,8 @@ Formas de incluir CSS:
     Se aplican utilizando la etiqueta style dentro de la etiqueda head.
     Para poder aplicar los estilos es necesario definir identificadores llamados SELECTORES los cuales pueden ser:
     -Nombre de la etiqueta
-    -Id de la etiqueta
-    -Una clase de estilos
+    -Id de la etiqueta: Se utiliza el prefijo # (numeral)
+    -Una clase de estilos: Se utiliza el prefijo . (punto)
 
     La sintaxis para definir selectores es la siguiente:
     selector{
@@ -72,4 +72,23 @@ Formas de incluir CSS:
         ...;
         estiloN:valorN;
     }
-*En archivos externos
+*En archivos externos:
+    Se crean archivos planos con la extension .css 
+    Se incluyen a un documento html utilizando la etiqueta link dentro de la etiqueta head.
+
+
+Prioridades estilos:
+1. Estilos en linea
+2. Estilos por ID
+3. Estilos por clase css
+4. Estilos por etiqueta
+
+Se puede saltar la prioridad utilizando !important
+
+
+Media Query CSS -> Sitios web responsivos o adaptables a diferentes tamaños de pantalla (Responsive websites).
+
+
+Bootstrap CSS
+Javascript
+LocalStorage

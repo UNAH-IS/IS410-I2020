@@ -1,0 +1,31 @@
+/* Utilizar los mismos estilos para multiples selectores, estos se separan con coma */
+.texto-negrita,#login input[type="button"]{
+    font-weight: bold;
+}
+/* Busca dentro de una etiqueta con el id #login otra etiqueta que coincida con el selector input[type="button"]*/
+#login input[type="button"]{
+    background-color:#E50914;
+    color:white;
+    width: 100%;
+    padding:20px;
+    text-align: center;
+    border-radius: 5px;
+    border:0;
+    font-size: 1rem;
+    margin:10px 0 10px 0;
+    cursor:pointer;
+    transition: background-color .3s ease-in-out;
+}
+
+#login input[type="button"]:hover{
+    background-color:rgb(121, 3, 9);
+}
+
+#login input[type="button"]:disabled{
+    background-color:rgb(133, 112, 113);
+    cursor:not-allowed;
+}
+
+.parrafo-azul{
+    color:coral;
+}
