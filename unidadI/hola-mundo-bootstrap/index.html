@@ -6,24 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bootstrap</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        .btn-primary{
-            background-color:#834FCF;
-            border-color:#834FCF;
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>Hola mundo bootstrap</h1>
-    <div class="alert alert-danger">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima excepturi fugit enim eius quibusdam, earum unde fuga illum! Ipsa atque, consequuntur quos quisquam autem perferendis perspiciatis a eaque odio quidem cum sint praesentium labore eum ratione est inventore neque exercitationem doloribus? Ratione et fuga voluptatem, incidunt eligendi inventore nam quo!
-        <button class="btn btn-danger">Click</button>
-        <button class="btn btn-success">Click</button>
-    </div>
-    <div class="btn-group">
-        <button class="btn btn-primary">Click</button>
-        <button class="btn btn-secondary">Click</button>
-        <button class="btn btn-success">Click</button>
-    </div>
+    <table class="table table-striped table-hover" style="width: 50%;">
+        <tr>
+            <td>Nombre: </td>
+            <td><input class="form-control" value="Juan" type="text" placeholder="Introduzca su nombre"></td>
+        </tr>
+        <tr>
+            <td>Apellido: </td>
+            <td><input class="form-control" type="text" placeholder="Introduzca su apellido" ></td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input class="form-control" type="password" placeholder="Contraseña"></td>
+        </tr>
+        <tr class="table-warning">
+            <td>Gustos: </td>
+            <td>
+                <input class="form-check-input" type="checkbox" id="chk-0" name="chk-gustos[]" value="0"><label for="chk-0">Ella</label><br>
+                <input class="form-check-input" type="checkbox" id="chk-1" name="chk-gustos[]" value="1"><label for="chk-1">Baleadas</label><br>
+                <input class="form-check-input" type="checkbox" id="chk-2" name="chk-gustos[]" value="2"><label for="chk-2">Sopa de mondongo</label><br>
+                <input class="form-check-input" type="checkbox" id="chk-3" name="chk-gustos[]" value="3"><label for="chk-3">Pupusas</label><br>
+                <input class="form-check-input" type="checkbox" id="chk-4" name="chk-gustos[]" value="4"><label for="chk-4">Fresco de maracuya</label><br>
+                <label><input class="form-check-input" type="checkbox" name="chk-gustos[]" value="5">Horchata</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Genero:</td>
+            <td>
+                <input id="rbt-f" class="form-check-input" type="radio" name="rbt-genero" value="F">
+                <label for="rbt-f">Femenino</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="rbt-m" class="form-check-input" type="radio" name="rbt-genero" value="M">
+                <label for="rbt-m">Masculino</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Dirección</td>
+            <td>
+                <textarea class="form-control" placeholder="Direccion" rows="10" cols="40">Colonia Kenide</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Pais</td>
+            <td>
+                <select class="form-control" id="pais">
+                    <option value="-">Seleccione un país</option>
+                    <option value="1">Honduras</option>
+                    <option value="2">Nicaragua</option>
+                    <option value="3">Guatemala</option>
+                    <option value="4">El Salvador</option>
+                    <option value="5">Costa Rica</option>
+                    <option value="6">Panama</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <!--Botones del tipo submit tienen una programación predefinida para realizar peticiones sincronas utilizando la etiqueta form-->
+                <button class="btn btn-primary" type="submit">Click aquí</button>
+                <input class="btn btn-secondary" type="submit" value="Click aquí">
+
+                <!--Botones del tipo button, son botones sin funcionalidad, el programador les da cualquier funcionalidad utilizando javascript. -->
+                <button class="btn btn-success" type="button">Click aquí</button>
+                <input class="btn btn-warning" type="button" value="Click aquí">
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

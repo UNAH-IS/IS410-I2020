@@ -1,0 +1,21 @@
+.btn-primary{
+    background-color:#834FCF;
+    border-color:#834FCF;
+}
+.btn-primary:hover{
+    background-color:#4d248b;
+    border-color:#4d248b;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+    background-color:#4d248b;
+    border-color:#4d248b;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    background-color:#4d248b;
+    border-color:#4d248b;
+    box-shadow: 0 0 0 0.2rem rgba(88, 14, 191, 0.5);
+}
