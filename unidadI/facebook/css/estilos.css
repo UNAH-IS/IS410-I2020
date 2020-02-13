@@ -1,0 +1,25 @@
+
+body {
+    padding-top: 3.5rem;
+}
+
+.bg-dark {
+    background-color: #3B5998!important;
+}
+
+.btn-primary{
+    background-color: #4267b2;
+    border-color: #29487d;
+    border-radius: 0;
+}
+
+.btn-primary:hover{
+    background-color: #1b366b;
+    border-color: #29487d;
+    border-radius: 0;
+}
+
+.navbar{
+    padding-left:150px;
+    padding-right:150px;
+}
