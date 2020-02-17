@@ -23,3 +23,23 @@ body {
     padding-left:150px;
     padding-right:150px;
 }
+
+#tbl-info td{
+    padding:20px;
+}
+
+#formulario input{
+    margin-bottom:10px;
+    box-sizing: border-box;
+    font-size:18px;
+}
+
+
+#formulario .btn-success{
+    background-image:linear-gradient(180deg, #77B962,#5A8D47);
+    font-weight: bold;
+    padding-left:40px;
+    padding-right:40px;
+    border-color:rgb(50, 87, 37);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.788);
+}
