@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo JS</title>
+</head>
+<body>
+    <script>
+        //Comentario
+        /* Comentarios
+        de varias lineas
+        */
+        /*Tipos de datos:
+            cadenas
+            enteros
+            flotantes
+            arreglos
+            objetos (JSON)
+        */
+        var nombre='Juan'; //Variables globales
+        let apellido='Perez'; //Variables locales (solo existen en un bloque {})
+        // document.write('<b>Hola '+nombre+' '+apellido+'</b>');
+        for(let i=0; i<10;i++)
+            document.write(`<b>Hola ${nombre} ${apellido}</b><br>`);
+
+        console.log('Hola mundo');
+        console.error('Este es un mensaje de error aunque no hay error');
+
+        // for(let i=0; i<20;i++)
+        alert('Hola mundo, este es un cuadro de dialogo');
+
+        //JSON (Javascript Object Notation)
+        let persona = {
+            nombre:'Pedro',
+            apellido:'Martinez',
+            edad:35
+        }
+
+        console.log('Nombre de la persona:' + persona.nombre);
+
+    </script>
+</body>
+</html>
