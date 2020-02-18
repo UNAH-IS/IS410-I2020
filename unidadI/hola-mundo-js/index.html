@@ -28,16 +28,72 @@
         console.error('Este es un mensaje de error aunque no hay error');
 
         // for(let i=0; i<20;i++)
-        alert('Hola mundo, este es un cuadro de dialogo');
+        //alert('Hola mundo, este es un cuadro de dialogo');
 
+        class Computadora{ //UpperCamelCase
+            constructor(marca, modelo){//lowerCamelCase
+                this.marca=marca;
+                this.modelo=modelo;
+            }
+
+            mostrarDatos(){
+                console.log(this.marca + ',' + this.modelo);
+            }
+        }
+
+        let computadora = new Computadora('Dell','Isv49');
+
+        computadora.mostrarDatos();
         //JSON (Javascript Object Notation)
         let persona = {
             nombre:'Pedro',
             apellido:'Martinez',
-            edad:35
+            edad:35,
+            mostrarMensaje:()=>{console.log("Este es el mensaje")}
         }
 
+        persona.mostrarMensaje();
+
+        // ECMAScript 6 (ES6)
+
         console.log('Nombre de la persona:' + persona.nombre);
+        console.log(persona);
+        console.log(computadora);
+
+        document.write(JSON.stringify(persona));
+        document.write(JSON.stringify(computadora));
+
+        function sumar(a,b){
+            return a+b;
+        }
+
+        let c = sumar(1,4); //Almacenar el resultado de retorno de una funcion
+        let funcion = sumar; 
+
+        let resta = function(a,b){
+            return a-b;
+        }
+
+        //Arrow Functions
+        /*
+        let multiplicacion = (a,b)=>{
+            return a*b;
+        }
+        */
+        let multiplicacion = (a,b) => a*b;
+        let mostrarTexto = x=>console.log(x);
+
+
+        console.log(sumar(5,6));
+        console.log(funcion(10,20));
+        console.log(resta(4,6));
+        console.log(multiplicacion(6,6));
+
+        mostrarTexto("Que loco esta esto");
+
+        (()=>console.log("Hola mundo, esto es una autoejecucion"))();
+
+        (()=>console.log("Hola mundo, esto es una autoejecucion"))();
 
     </script>
 </body>
