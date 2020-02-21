@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contenido{
+            background-color:black;
+            color:white;
+            padding:20px;
+            display:block;
+            transition: all 1s ease-in-out;
+        }
+
+        .input-error{
+            border: 1px solid red;
+        }
+        .input-success{
+            border: 1px solid green;
+        }
+
+        input[type="text"], input[type="password"]{
+            font-size:16px;
+            padding:10px;
+        }
+        input[type="text"]:focus, input[type="password"]:focus{
+            outline-width: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <input value="jperez" id="usuario" type="text" placeholder="Usuario">
+    <input id="password" type="password" placeholder="Password">
+    <input type="button" onclick="login()" value="Login">
+    <button type="button" onclick="asignarValores()">Asignar valores</button>
+    <button type="button" onclick="mostrarParrafos()">Mostrar parrafos</button>
+    <button type="button" onclick="alert('Hola mundo');console.log('Hola mundo');console.error('Este no es un error')">Ejecutar javascrip</button>
+    <div id="resultado"></div>
+    <p id="parrafo1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quod culpa quasi iste eius eum alias. Voluptate officia quos assumenda itaque debitis cum qui laborum sint, error totam, obcaecati vel quaerat quae voluptates voluptas adipisci ipsum soluta dignissimos hic, nam repellendus? Hic ipsam illum explicabo distinctio ratione repellendus, ex accusamus.</p>
+    <p>Nam nihil placeat quod officia accusamus! Doloremque commodi, sapiente perferendis, officia unde exercitationem, eum quis quod deleniti enim voluptates amet alias illum. Saepe fugit aut laborum quis pariatur dolores distinctio deleniti dolorum itaque! Cupiditate quos dolores molestias dolor placeat, fugit quas cumque voluptatibus neque quod eaque nihil ex quo expedita?</p>
+    <p>Voluptatem sequi accusamus quod accusantium ipsa, animi adipisci similique dolor. Molestias culpa commodi in, eveniet aliquam iusto beatae nesciunt eaque ea minus nobis nulla dicta pariatur, odio vel nihil laudantium similique veniam animi aspernatur, labore doloribus illum. Doloribus similique consequuntur iste in atque? Velit repellendus consectetur ab quae nemo quasi?</p>
+    <section id="contenido">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi ea harum, magnam porro unde ullam exercitationem aspernatur nobis quam quae provident vel enim ab architecto similique corporis ipsa ex consequuntur omnis, optio laboriosam! Ab, minus fuga possimus et unde vero molestiae. Nam, numquam totam! Iure eaque, eveniet maxime cumque esse fugit reprehenderit aliquid voluptate alias reiciendis sunt, placeat asperiores repellendus temporibus eum harum, laboriosam ab? Voluptatum est similique nobis incidunt quam, dolorum velit qui deserunt commodi iusto? Itaque consectetur soluta recusandae dolorum delectus sunt! Fuga atque, voluptas minima eum illum fugit officiis est assumenda suscipit harum, libero soluta odit alias.  
+        </p>
+    </section>
+    <button type="button" onclick="mostrarSeccion();">Mostrar sección</button>
+    <button type="button" onclick="ocultarSeccion()">Ocultar sección</button>
+
+    <hr>
+    <input type="text" placeholder="Email" onkeyup="validarEmail(this)">
+    <script src="js/controlador.js"></script>
+</body>
+</html>

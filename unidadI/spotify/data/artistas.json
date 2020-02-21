@@ -1,0 +1,384 @@
+[
+    {
+        "codigoArtista":1,
+        "nombreArtista":"Artista 1",
+        "albumes":[
+            {
+                "nombreAlbum":"Album 1",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 1",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 2",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 3",
+                        "duracion":"3:33"
+                    },
+                    {
+                        "nombreCancion":"Cancion 4",
+                        "duracion":"3:34"
+                    },{
+                        "nombreCancion":"Cancion 5",
+                        "duracion":"3:35"
+                    },
+                    {
+                        "nombreCancion":"Cancion 6",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 7",
+                        "duracion":"3:37"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 2",
+                "caratulaAlbum":"img/cover2.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 8",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 9",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 10",
+                        "duracion":"3:33"
+                    },
+                    {
+                        "nombreCancion":"Cancion 11",
+                        "duracion":"3:34"
+                    },{
+                        "nombreCancion":"Cancion 12",
+                        "duracion":"3:35"
+                    },
+                    {
+                        "nombreCancion":"Cancion 13",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 14",
+                        "duracion":"3:37"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 3",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 15",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 16",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 17",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 18",
+                        "duracion":"3:36"
+                    },{
+                        "nombreCancion":"Cancion 19",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 20",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 21",
+                        "duracion":"3:36"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "codigoArtista":2,
+        "nombreArtista":"Artista 2",
+        "albumes":[
+            {
+                "nombreAlbum":"Album 4",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 22",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 23",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 24",
+                        "duracion":"3:33"
+                    },
+                    {
+                        "nombreCancion":"Cancion 25",
+                        "duracion":"3:34"
+                    },{
+                        "nombreCancion":"Cancion 26",
+                        "duracion":"3:35"
+                    },
+                    {
+                        "nombreCancion":"Cancion 27",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 28",
+                        "duracion":"3:37"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 5",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 29",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 30",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 31",
+                        "duracion":"3:33"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 6",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 32",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 33",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 35",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 36",
+                        "duracion":"3:36"
+                    },{
+                        "nombreCancion":"Cancion 37",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 38",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 39",
+                        "duracion":"3:36"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "codigoArtista":3,
+        "nombreArtista":"Artista 3",
+        "albumes":[
+            {
+                "nombreAlbum":"Album 7",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 41",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 42",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 43",
+                        "duracion":"3:33"
+                    },
+                    {
+                        "nombreCancion":"Cancion 44",
+                        "duracion":"3:34"
+                    },{
+                        "nombreCancion":"Cancion 45",
+                        "duracion":"3:35"
+                    },
+                    {
+                        "nombreCancion":"Cancion 46",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 47",
+                        "duracion":"3:37"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 8",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 58",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 59",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 60",
+                        "duracion":"3:33"
+                    },
+                    {
+                        "nombreCancion":"Cancion 61",
+                        "duracion":"3:34"
+                    },{
+                        "nombreCancion":"Cancion 62",
+                        "duracion":"3:35"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 9",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 63",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 64",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 65",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 66",
+                        "duracion":"3:36"
+                    },{
+                        "nombreCancion":"Cancion 67",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 68",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 69",
+                        "duracion":"3:36"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "codigoArtista":4,
+        "nombreArtista":"Prueba revisión",
+        "albumes":[
+            {
+                "nombreAlbum":"Album 10",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 70",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 72",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 73",
+                        "duracion":"3:33"
+                    },
+                    {
+                        "nombreCancion":"Cancion 74",
+                        "duracion":"3:34"
+                    },{
+                        "nombreCancion":"Cancion 75",
+                        "duracion":"3:35"
+                    },
+                    {
+                        "nombreCancion":"Cancion 76",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 77",
+                        "duracion":"3:37"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 11",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 78",
+                        "duracion":"3:31"
+                    },
+                    {
+                        "nombreCancion":"Cancion 79",
+                        "duracion":"3:32"
+                    },
+                    {
+                        "nombreCancion":"Cancion 80",
+                        "duracion":"3:33"
+                    }
+                ]
+            },
+            {
+                "nombreAlbum":"Album 12",
+                "caratulaAlbum":"img/cover1.jpg",
+                "canciones":[
+                    {
+                        "nombreCancion":"Cancion 81",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 82",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 83",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 84",
+                        "duracion":"3:36"
+                    },{
+                        "nombreCancion":"Cancion 85",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 86",
+                        "duracion":"3:36"
+                    },
+                    {
+                        "nombreCancion":"Cancion 87",
+                        "duracion":"3:36"
+                    }
+                ]
+            }
+        ]
+    }
+]

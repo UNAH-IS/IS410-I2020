@@ -95,6 +95,26 @@
 
         (()=>console.log("Hola mundo, esto es una autoejecucion"))();
 
+
+        let arreglo =["Hola","Mundo"];
+        console.log(arreglo[0] + ' ' + arreglo[1]);
+
+        let arregloDeCosas = ["Texto", 345, 54.44,"Otro texto",{nombre:'Juan'}];
+        document.write(arregloDeCosas);
+        for(let i=0;i<arregloDeCosas.length;i++)
+            console.log(arregloDeCosas[i]);
+
+        // arreglo['nombre'] = 'Juan';
+        let personas = [
+            {nombre:'Juan',apellido:'Perez',edad:'22',genero:'Masculino'},
+            {nombre:'Pedro',apellido:'Hernandez',edad:'33',genero:'Masculino'},
+            {nombre:'Maria',apellido:'Mendez',edad:'44',genero:'Femenino'},
+            {nombre:'Judas',apellido:'Rodriguez',edad:'55',genero:'Masculino'}
+        ];
+
+        console.log(personas);
+        document.write(JSON.stringify(personas));
+
     </script>
 </body>
 </html>
