@@ -12,6 +12,10 @@ var artistas = [
                     {
                         nombreCancion:'Perreo intenso',
                         duracion:'3:33'
+                    },
+                    {
+                        nombreCancion:'El Tra',
+                        duracion:'3:33'
                     }
                 ]
             },
@@ -22,7 +26,7 @@ var artistas = [
                 caratula:'img/cover2.jpg',
                 canciones:[
                     {
-                        nombreCancion:'Perreo intenso',
+                        nombreCancion:'Perreo intenso Remix 1',
                         duracion:'3:33'
                     }
                 ]
@@ -34,7 +38,7 @@ var artistas = [
                 caratula:'img/cover3.jpg',
                 canciones:[
                     {
-                        nombreCancion:'Perreo intenso',
+                        nombreCancion:'Perreo intenso, versión cumbión ',
                         duracion:'3:33'
                     }
                 ]
@@ -95,6 +99,7 @@ function generarTabla(){
                     <td>${artistas[i].albumes.length}</td>
                     <td><button onclick="verDetalles(${i})">Ver detalles</button></td>
                 </tr>`;
+
     console.log(artistas);
 }
 
@@ -106,6 +111,7 @@ function verDetalles(indice){
         Caratula: <img src="${artistas[indice].caratulaArtista}"><br>`;
     //JSON.stringify(artistas[indice]);
     document.querySelector('#tbl-detalle-albumes tbody').innerHTML = '';
+    document.getElementById('artista').innerHTML = artistas[indice].nombreArtista;
     for (let j=0;j<artistas[indice].albumes.length;j++)
         document.querySelector('#tbl-detalle-albumes tbody').innerHTML +=
             `<tr>
@@ -114,7 +120,18 @@ function verDetalles(indice){
             <td>${artistas[indice].albumes[j].genero}</td>
             <td>${artistas[indice].albumes[j].caratula}</td>
             <td>${artistas[indice].albumes[j].canciones.length}</td>
+            <td><button type="button" onclick="verCanciones(${indice},${j})">Ver canciones</button></td>
             </tr>`; 
 }
 
-
+function verCanciones(indiceArtista, indiceAlbum){
+    const canciones = artistas[indiceArtista].albumes[indiceAlbum].canciones;
+    document.querySelector('#tbl-canciones tbody').innerHTML = '';
+    document.getElementById('album').innerHTML = artistas[indiceArtista].albumes[indiceAlbum].tituloAlbum;
+    for(let k=0; k<canciones.length; k++)
+        document.querySelector('#tbl-canciones tbody').innerHTML +=
+            `<tr>
+                <td>${canciones[k].nombreCancion}</td>
+                <td>${canciones[k].duracion}</td>
+            </tr>`;
+}
