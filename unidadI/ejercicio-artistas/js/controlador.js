@@ -90,6 +90,7 @@ var artistas = [
 ];
 
 function generarTabla(){
+    document.getElementById("tbl-info-contenido").innerHTML = '';
     for (let i=0;i<artistas.length;i++)
         //document.querySelector("#tbl-info tbody")
         document.getElementById("tbl-info-contenido").innerHTML += 
@@ -108,7 +109,7 @@ generarTabla();
 function verDetalles(indice){
     document.getElementById('detalle').innerHTML = 
         `Artista: ${artistas[indice].nombreArtista}<br>
-        Caratula: <img src="${artistas[indice].caratulaArtista}"><br>`;
+        Caratula: <img style="width:300px" src="${artistas[indice].caratulaArtista}"><br>`;
     //JSON.stringify(artistas[indice]);
     document.querySelector('#tbl-detalle-albumes tbody').innerHTML = '';
     document.getElementById('artista').innerHTML = artistas[indice].nombreArtista;
@@ -134,4 +135,16 @@ function verCanciones(indiceArtista, indiceAlbum){
                 <td>${canciones[k].nombreCancion}</td>
                 <td>${canciones[k].duracion}</td>
             </tr>`;
+}
+
+function guardarArtista(){
+    let artista = {
+        nombreArtista:document.getElementById('nombreArtista').value,
+        caratulaArtista:document.getElementById('caratulaArtista').value,
+        albumes:[]
+    };
+    console.log(artista);
+    artistas.push(artista);
+    console.log(artistas);
+    generarTabla();
 }
