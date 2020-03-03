@@ -16,6 +16,7 @@
 </head>
 <body>
     <h1>Artistas</h1>
+    <input type="hidden" id="indice-artista-seleccionado">
     <table id="tbl-info">
         <thead>
             <tr>
@@ -32,7 +33,19 @@
     <div id="detalle">
     </div>
     <h1>Albumes del artista: <span id="artista"></span></h1>
-    <button type="button">Agregar un nuevo album</button>
+    <button type="button" onclick="mostrarFormularioAlbum()">Agregar un nuevo album</button>
+    <div id="formulario-album" style="display:none">
+        Titulo Album: <input id="titulo-album" type="text"><br>
+        Año: <input id="anio-album" type="text"><br>
+        Genero: <select id="genero-album">
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Romantica">Romantica</option>
+                </select><br>
+        Caratula: <input id="url-caratula-album" type="text"><br>
+        <button type="button" onclick="guardarAlbum()">Guardar Album</button>
+    </div>
     <table id="tbl-detalle-albumes">
         <thead>
             <tr>

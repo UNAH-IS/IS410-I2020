@@ -1,6 +1,6 @@
 var localStorage = window.localStorage;
 var artistas;
-
+var artistaSeleccionado;
 if (localStorage.getItem("artistas")==null){
     artistas = [
         {
@@ -109,7 +109,7 @@ function generarTabla(){
                     <td>${artistas[i].nombreArtista}</td>
                     <td><img src="${artistas[i].caratulaArtista}" ></td>
                     <td>${artistas[i].albumes.length}</td>
-                    <td><button onclick="verDetalles(${i})">Ver detalles</button></td>
+                    <td><button onclick="verDetallesArtista(${i})">Ver detalles</button></td>
                 </tr>`;
 
     console.log(artistas);
@@ -117,7 +117,9 @@ function generarTabla(){
 
 generarTabla();
 
-function verDetalles(indice){
+function verDetallesArtista(indice){
+    document.getElementById('indice-artista-seleccionado').value = indice;
+    artistaSeleccionado = indice;
     document.getElementById('detalle').innerHTML = 
         `Artista: ${artistas[indice].nombreArtista}<br>
         Caratula: <img style="width:300px" src="${artistas[indice].caratulaArtista}"><br>`;
@@ -134,6 +136,8 @@ function verDetalles(indice){
             <td>${artistas[indice].albumes[j].canciones.length}</td>
             <td><button type="button" onclick="verCanciones(${indice},${j})">Ver canciones</button></td>
             </tr>`; 
+
+    document.getElementById("formulario-album").style.display =  'none';
 }
 
 function verCanciones(indiceArtista, indiceAlbum){
@@ -159,4 +163,34 @@ function guardarArtista(){
     console.log(artistas);
     localStorage.setItem('artistas',JSON.stringify(artistas));
     generarTabla();
+}
+
+function mostrarFormularioAlbum(){
+    document.getElementById("formulario-album").style.display =  'block';
+}
+
+function guardarAlbum(){
+    //Toda la informacion del album
+    console.log('Variable: ' + artistaSeleccionado);
+    console.log('Input hidden ' + document.getElementById('indice-artista-seleccionado').value);
+    let album = {
+        tituloAlbum:document.getElementById('titulo-album').value,
+        anio:document.getElementById('anio-album').value,
+        genero:document.getElementById('genero-album').value,
+        caratula:document.getElementById('url-caratula-album').value,
+        canciones:[]
+    };
+
+    artistas[artistaSeleccionado].albumes.push(album);
+    localStorage.setItem('artistas',JSON.stringify(artistas));
+    //verDetallesArtista(artistaSeleccionado);
+    document.querySelector('#tbl-detalle-albumes tbody').innerHTML +=
+            `<tr>
+            <td>${album.tituloAlbum}</td>
+            <td>${album.anio}</td>
+            <td>${album.genero}</td>
+            <td>${album.caratula}</td>
+            <td>${album.canciones.length}</td>
+            <td><button type="button" onclick="verCanciones(${artistaSeleccionado},${artistas[artistaSeleccionado].albumes.length-1})">Ver canciones</button></td>
+            </tr>`; 
 }
