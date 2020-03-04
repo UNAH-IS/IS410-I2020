@@ -31,7 +31,7 @@
             </h6>
             <!--Aqui tiene que ir el html del listado de artistas-->
           </ul>
-  
+          <button class="btn btn-outline-success btn-sm ml-4" data-toggle="modal" data-target="#modal-nuevo-artista">Agregar Artista</button>
           <ul class="nav flex-column">
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Playlists</span>
@@ -159,37 +159,7 @@
         <!------------------------------->
 
         <div id="vista-artista" style="display:none;">
-          <section class="container-fluid">
-            <div class="row">
-              <div class="col-4 text-center">
-                <div class="cover-image" style="background-image:url(img/cover1.jpg);">
-                </div><br>
-                <h5 class="text-muted">Album 1</h5>
-                <button class="btn btn-success"type="button">Play</button>
-              </div>
-              <div class="col-8">
-                
-                <!--Item 1 -->
-                <div class="row song-item">
-                  <div class="col-1"><i class="fas fa-play"></i></div>
-                  <div class="col-10">
-                    <div class="song-title">Cancion</div>
-                    <div class="song-description">Artista - Album</div>
-                  </div>
-                  <div class="col-1">
-                      <span>3:56</span>
-                      <button onclick="agregarCancion(1)" class="btn btn-outline-success btn-sm" title="Agregar a playlist"><i class="fas fa-plus"></i></button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          <hr>
-          
         <div><!--vista-artista-->
-          
           
       </main>
     </div>
@@ -253,6 +223,29 @@
   </div>
 
 
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-nuevo-artista" tabindex="-1" role="dialog" aria-labelledby="modal-nuevo-artistaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-nuevo-artistaLabel">Nuevo Artista</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Nombre artista: <br><input class="form-control" id="nombreArtista" type="text" placeholder="Nombre artista"> <br>
+          URL Caratula: <br><input class="form-control" id="caratulaArtista" type="text" placeholder="Caratula"><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarArtista()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>

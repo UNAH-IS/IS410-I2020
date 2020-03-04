@@ -102,7 +102,7 @@ console.log(artistas);
 
 
 function generarListaArtistas(){
-    //document.getElementById("lista-artistas").innerHTML = '';
+    document.getElementById("lista-artistas").innerHTML = '';
     for (let i=0;i<artistas.length;i++)
         //document.querySelector("#tbl-info tbody")
         document.getElementById("lista-artistas").innerHTML += 
@@ -122,11 +122,45 @@ generarListaArtistas();
 //     $("#vista-artista").hide();
 // }
 
-function verArtista(codigoArtista){
-    console.log('Ver artista con codigo: ' + codigoArtista);
+function verArtista(indiceArtista){
+    console.log('Ver artista con codigo: ' + indiceArtista);
     //document.querySelector('#vista-artista').style.display = 'block';
+    document.getElementById("vista-artista").innerHTML = '';
+    for (let j=0;j<artistas[indiceArtista].albumes.length;j++){
+        const album = artistas[indiceArtista].albumes[j];
+        let canciones='';
+        for (let k=0;k<album.canciones.length;k++){
+            canciones += `
+            <div class="row song-item">
+                <div class="col-1"><i class="fas fa-play"></i></div>
+                <div class="col-10">
+                    <div class="song-title">${album.canciones[k].nombreCancion}</div>
+                    <div class="song-description">${artistas[indiceArtista].nombreArtista} - ${album.tituloAlbum}</div>
+                </div>
+                <div class="col-1">
+                    <span>3:56</span>
+                    <button onclick="agregarCancion(${k})" class="btn btn-outline-success btn-sm" title="Agregar a playlist"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>`;
+        }
 
 
+
+    document.getElementById("vista-artista").innerHTML +=
+        `<section class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <div class="cover-image" style="background-image:url(${album.caratula});">
+                    </div><br>
+                    <h5 class="text-muted">${album.tituloAlbum}</h5>
+                    <button class="btn btn-success"type="button">Play</button>
+                </div>
+            <div class="col-8">
+                ${canciones}
+            </div>
+            </div>
+        </section><hr>`;
+    }
     $("#vista-artista").show();
     $("#vista-playlist").hide();
 }
@@ -136,3 +170,16 @@ function verArtista(codigoArtista){
 //     $("#modal-playlists").modal('show');
 // }
 
+function guardarArtista(){
+    let artista = {
+        nombreArtista:document.getElementById('nombreArtista').value,
+        caratulaArtista:document.getElementById('caratulaArtista').value,
+        albumes:[]
+    };
+    console.log(artista);
+    artistas.push(artista);
+    console.log(artistas);
+    localStorage.setItem('artistas',JSON.stringify(artistas));
+    generarListaArtistas();
+    $('#modal-nuevo-artista').modal('hide');
+}
