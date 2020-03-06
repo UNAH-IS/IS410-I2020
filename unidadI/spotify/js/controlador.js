@@ -1,6 +1,7 @@
 var localStorage = window.localStorage;
 var artistas;
 var artistaSeleccionado;
+var albumSeleccionado;
 if (localStorage.getItem("artistas")==null){
     artistas = [
         {
@@ -124,6 +125,8 @@ generarListaArtistas();
 
 function verArtista(indiceArtista){
     console.log('Ver artista con codigo: ' + indiceArtista);
+    artistaSeleccionado = indiceArtista;
+    document.getElementById("titulo-artista").innerHTML = artistas[indiceArtista].nombreArtista;
     //document.querySelector('#vista-artista').style.display = 'block';
     document.getElementById("vista-artista").innerHTML = '';
     for (let j=0;j<artistas[indiceArtista].albumes.length;j++){
@@ -138,7 +141,7 @@ function verArtista(indiceArtista){
                     <div class="song-description">${artistas[indiceArtista].nombreArtista} - ${album.tituloAlbum}</div>
                 </div>
                 <div class="col-1">
-                    <span>3:56</span>
+                    <span>${album.canciones[k].duracion}</span>
                     <button onclick="agregarCancion(${k})" class="btn btn-outline-success btn-sm" title="Agregar a playlist"><i class="fas fa-plus"></i></button>
                 </div>
             </div>`;
@@ -153,7 +156,7 @@ function verArtista(indiceArtista){
                     <div class="cover-image" style="background-image:url(${album.caratula});">
                     </div><br>
                     <h5 class="text-muted">${album.tituloAlbum}</h5>
-                    <button class="btn btn-success"type="button">Play</button>
+                    <button class="btn btn-success" type="button" onclick="nuevaCancion(${j})">Nueva Cancion</button>
                 </div>
             <div class="col-8">
                 ${canciones}
@@ -182,4 +185,41 @@ function guardarArtista(){
     localStorage.setItem('artistas',JSON.stringify(artistas));
     generarListaArtistas();
     $('#modal-nuevo-artista').modal('hide');
+}
+
+function guardarAlbum(){
+    let album= {
+        tituloAlbum:document.getElementById('tituloAlbum').value,
+        anio:document.getElementById('anioAlbum').value,
+        genero:document.getElementById('generoAlbum').value,
+        caratula:document.getElementById('caratulaAlbum').value,
+        canciones:[] 
+    };
+
+    console.log(album);
+
+    artistas[artistaSeleccionado].albumes.push(album);
+    localStorage.setItem('artistas',JSON.stringify(artistas));
+    verArtista(artistaSeleccionado); //Volver a generar los albumes del artista seleccionado
+    //Otra opcion es unicamente agregar el item guardado
+    $('#modal-nuevo-album').modal('hide');
+
+}
+
+function nuevaCancion(indiceAlbum){
+    albumSeleccionado = indiceAlbum;
+    console.log('Indice album: ' + indiceAlbum);
+    $('#modal-nueva-cancion').modal('show');
+}
+
+function guardarCancion(){
+    let cancion = {
+        nombreCancion:document.getElementById('nombreCancion').value,
+        duracion:document.getElementById('duracion').value
+    }
+
+    artistas[artistaSeleccionado].albumes[albumSeleccionado].canciones.push(cancion);
+    localStorage.setItem('artistas', JSON.stringify(artistas));
+    $('#modal-nueva-cancion').modal('hide');
+    verArtista(artistaSeleccionado);
 }

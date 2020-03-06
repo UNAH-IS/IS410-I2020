@@ -157,8 +157,10 @@
         </div>
 
         <!------------------------------->
-
+        <h1 id="titulo-artista"></h1>
+        <button id="btn-nuevo-album" class="btn btn-outline-success" data-toggle="modal" data-target="#modal-nuevo-album">Nuevo Album</button>
         <div id="vista-artista" style="display:none;">
+          
         <div><!--vista-artista-->
           
       </main>
@@ -225,7 +227,7 @@
 
 
 
-  <!-- Modal -->
+  <!-- Modal Nuevo Artista -->
   <div class="modal fade" id="modal-nuevo-artista" tabindex="-1" role="dialog" aria-labelledby="modal-nuevo-artistaLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -242,6 +244,52 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <button type="button" class="btn btn-primary" onclick="guardarArtista()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Nuevo Album -->
+  <div class="modal fade" id="modal-nuevo-album" tabindex="-1" role="dialog" aria-labelledby="modal-nuevo-artistlbum" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-nuevo-artistlbum">Nuevo Album</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Titulo Album: <br><input class="form-control" id="tituloAlbum" type="text" placeholder="Nombre album"> <br>
+          URL Caratula: <br><input class="form-control" id="caratulaAlbum" type="text" placeholder="Caratula"><br>
+          Año: <br><input class="form-control" id="anioAlbum" type="text" placeholder="Año"><br>
+          Genero: <br><input class="form-control" id="generoAlbum" type="text" placeholder="Genero"><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success" onclick="guardarAlbum()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Nueva Cancion -->
+  <div class="modal fade" id="modal-nueva-cancion" tabindex="-1" role="dialog" aria-labelledby="modal-nuevo-artistlbum" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-nuevo-artistlbum">Nueva Canción</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Nombre canción: <br><input class="form-control" id="nombreCancion" type="text" placeholder="Nombre canción"> <br>
+          Duración: <br><input class="form-control" id="duracion" type="text" placeholder="Duración"><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success" onclick="guardarCancion()">Guardar</button>
         </div>
       </div>
     </div>
