@@ -1,0 +1,18 @@
+Peticiones hacia el servidor:
+    Peticiones Sincronas:
+        Son las peticiones en las cuales el cliente hace la petición y tiene que esperar a que el servidor termine de procesar para continuar.
+        La forma básica de peticiones sincronas se hace mediante formularios, estos deben cumplir con los siguientes requisitos:
+            1. Incluir la etiqueta form con las propiedades action y method. En action indicar el recurso del lado del servidor que recibirá y procesará la información. En method, se indica el método de envio de información que pueden ser: GET, POST, PUT, DELETE, ....
+            2. Los componentes del formulario (input, select, textarea) deben tener el atributo name.
+            3. El boton de acción que se encargará de realizar la petición, es decir enviar la información debe ser del tipo submit.
+
+
+
+    Peticiones Asincronas:
+
+
+//Sincrono: Una instruccion se ejecuta hasta que la anterior finaliza
+int a = 5;
+int b = 10;
+int suma = a+b;
+System.out.println(suma);
