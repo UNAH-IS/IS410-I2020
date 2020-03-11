@@ -11,6 +11,13 @@ Peticiones hacia el servidor:
     Peticiones Asincronas:
 
 
+
+Metodos de envio de información:
+    GET: Envia la información a traves de la URL en formato URLEncoded
+    Sintaxis: URL?nombre1=valor1&nombre2=valor2&...&nombreN=valorN
+    POST: Empaqueta la información y la envia al recurso indicado pero no visible (No se ve en la URL)
+    
+
 //Sincrono: Una instruccion se ejecuta hasta que la anterior finaliza
 int a = 5;
 int b = 10;
