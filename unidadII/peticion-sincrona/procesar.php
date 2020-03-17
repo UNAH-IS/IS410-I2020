@@ -7,18 +7,24 @@
 </head>
 <body>
     <?php 
+        sleep(10);
         /*echo 'Usuario: ' . $_POST['usuario'].'<br>';
         echo 'Password: ' .$_POST['password'];*/
         // echo '<pre>';
         // var_dump($_POST);
         // echo '</pre>'; 
-        $usuarios = array();
-        $usuarios[] = $_POST;//0
-        $archivo = fopen('usuarios.json','a+');//r: Lectura, w: Escritura, a+: Anexar
+
+        $contenidoArchivo = file_get_contents('usuarios.json');
+        $usuarios = json_decode($contenidoArchivo,true);
+        $usuarios[] = $_POST;
+        $archivo = fopen('usuarios.json','w');//r: Lectura, w: Escritura, a+: Anexar
         fwrite($archivo, json_encode($usuarios));
         fclose($archivo);
+    ?>
 
-        echo "Se escribio esta información en el archivo: " .json_encode($_POST);
+    <hr>
+    <?php
+        include("ver-usuarios.php");
     ?>
 </body>
 </html>

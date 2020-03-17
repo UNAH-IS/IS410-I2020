@@ -6,10 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include("menu.html"); ?>
     <form action="procesar.php" method="POST">
         <input name="usuario" type="text" placeholder="Usuario">
         <input name="password" type="password" placeholder="Password">
-        <button type="submit">Login</button>
+        <button type="submit">Guardar</button>
     </form>
+    <hr>
+    <?php
+        include("ver-usuarios.php");
+    ?>
 </body>
 </html>
