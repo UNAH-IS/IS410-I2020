@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticiones asincronas</title>
+</head>
+<body>
+    <input id="usuario" placeholder="Usuario" type="text"><br>
+    <input id="password" placeholder="Password" type="text"><br>
+    <button type="button" onclick="loginAJAXJQuery()">Login AJAX JQuery</button>
+    <button type="button" onclick="loginAJAXAxios()">Login AJAX Axios</button>
+    <button type="button" onclick="otraAccion()">Otra Accion</button>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function loginAJAXJQuery(){
+            let persona = {
+                usuario: document.getElementById('usuario').value,
+                password: document.getElementById('password').value
+            }
+            let urlencoded = `usuario=${document.getElementById('usuario').value}&password=${document.getElementById('password').value}`;
+            $.ajax({
+                url:'procesar.php',
+                method:'post',
+                data: JSON.stringify(persona), //URLEncoded, JSON (cadena)
+                dataType:'json',
+                success:function(res){
+                    console.log('(Ajax JQUERY) Repuesta del servidor', res);
+                },
+                error:function(error){
+                    console.error(error);
+                }
+
+            });
+        }
+
+        function loginAJAXAxios(){
+            let persona = {
+                usuario: document.getElementById('usuario').value,
+                password: document.getElementById('password').value
+            }
+
+            axios({
+                url:'procesar.php',
+                method:'post',
+                responseType:'json',
+                data:persona //POST
+                //params:persona //GET
+            })
+            .then((res)=>{
+                console.log('(AJAX Axios)', res);
+            })
+            .catch((error)=>{
+                console.error('(AJAX Axios)', error);
+            });
+        }
+
+        function otraAccion(){
+            console.log("Otra accion");
+        }
+    </script>
+</body>
+</html>
